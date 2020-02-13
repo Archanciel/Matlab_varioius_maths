@@ -32,14 +32,18 @@ data = [];
 
 for k = 1:length(rs)
     n = length(out{k});
-    data = [data;  rs(k)*ones(n,1),out{k}];
+    arrayOfNLinesForSpecific_r_Value = [rs(k) * ones(n,1)];
+    unique_x_ValuesForEvery_r_Value = [arrayOfNLinesForSpecific_r_Value, out{k} / scale];
+    data = [data;  unique_x_ValuesForEvery_r_Value];
 end
 
+%size(data)
 % Plot the data
 figure();clf
-h=plot(data(:,1),data(:,2)/scale,'k.');
+h=plot(data(:,1),data(:,2),'k.');
 set(h,'markersize',1)
 axis tight
 set(gca,'units','normalized','position',[0 0 1 1])
 set(gcf,'color','white')
-axis off
+%axis off
+grid on
