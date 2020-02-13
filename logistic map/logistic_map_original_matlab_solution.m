@@ -8,7 +8,7 @@ clear
 scale = 10000; % determines the level of rounding
 maxpoints = 200; % determines maximum values to plot
 N = 3000; % number of "r" values to simulate
-a = 2.0; % starting value of "r"
+a = 0.0; % starting value of "r"
 b = 4; % final value of "r"... anything higher diverges.
 rs = linspace(a,b,N); % vector of "r" values
 M = 500; % number of iterations of logistics equation
