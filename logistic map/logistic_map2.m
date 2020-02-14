@@ -1,7 +1,7 @@
 MAX_R = 4;
-R_STEP = 0.001
-N_PERIODS = 500
-x_1 = 0.5
+R_STEP = 0.01;
+N_PERIODS = 300;
+x_1 = 0.5;
 XX = zeros(2, MAX_R / R_STEP * N_PERIODS);
 xx_index = 1;
 
@@ -24,6 +24,6 @@ end
 
 close all
 figure
-plot(XX(1,:), XX(2,:), 'b', 'markersize',1)
+plot(XX(1,:), XX(2,:), 'b.', 'markersize',1)
 xlabel = 'r';
 ylabel = x_n;

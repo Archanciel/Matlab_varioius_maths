@@ -1,6 +1,6 @@
-N = 20;
-r = 3.5;
-x1 = 0.05;
+N = 100;
+r = 2.9;
+x1 = 0.5;
 ;
 
 X = zeros(1,N);
@@ -14,16 +14,20 @@ close all
 figure()
 
 subplot(2,1,1)
-plot([1:N], X);
+p = plot([1:N], X, 'b.');
+set(p, 'markersize', 4)
 set(gca,'ylim',[0 1],'xlim',[0 N],'xtick',0:N/10:N,'ytick',0:0.1:1)
+grid on
 
 xlabel('N');
 ylabel('X_{n+1}');
 hold on
 subplot(2,1,2)
 Xn_plus_one = X(2:end);
-plot(X(1:N - 1), Xn_plus_one);
-set(gca,'ylim',[0 1],'xlim',[0 1],'xtick',0:0.1:1,'ytick',0:0.1:1)
+p = plot(X(1:N - 1), Xn_plus_one, 'r.');
+set(gca,'ylim',[0 1],'xlim',[0 1],'xtick',0:0.05:1,'ytick',0:0.05:1)
+set(p, 'markersize', 10)
+grid on
 
 xlabel('X_{n}');
 ylabel('X_{n+1}');

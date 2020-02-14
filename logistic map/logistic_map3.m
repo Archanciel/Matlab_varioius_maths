@@ -16,4 +16,4 @@ end
 size(X)
 close all
 figure
-plot(r, X(:,N_PERIODS - 99:N_PERIODS), '.')
+plot(r, X(:,:), '.')
