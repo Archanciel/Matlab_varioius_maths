@@ -40,17 +40,22 @@ end
 start_d = 2390;
 end_d = 2455;
 
-find(data(start_d:end_d,1) >= 2.97)
-find(data(start_d:end_d,1) <= 2.98)
-data(start_d:end_d,:)
+%start_d = 1;
+%end_d = length(data);
+
+%find(data(start_d:end_d,1) >= 2.97)
+%find(data(start_d:end_d,1) <= 2.98)
+%data(start_d:end_d,:)
 %size(data)
 % Plot the data
 close all
 figure();clf
 h=plot(data(start_d:end_d,1),data(start_d:end_d,2),'k.');
-set(h,'markersize',10)
-axis tight
+set(h,'markersize',3)
+%axis tight
 %set(gca,'units','normalized','position',[0 0 1 1])
 set(gcf,'color','white')
 %axis off
+xlabel('r', 'FontSize', 18);
+ylabel('x_{n+1}', 'FontSize', 18);
 grid on
