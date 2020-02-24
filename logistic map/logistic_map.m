@@ -1,5 +1,6 @@
 N = 100;
 r = 2.9;
+r = 3.9999;
 x1 = 0.5;
 ;
 
@@ -15,7 +16,7 @@ figure()
 
 subplot(2,1,1)
 p = plot([1:N], X, 'b.');
-set(p, 'markersize', 4)
+set(p, 'markersize', 10)
 set(gca,'ylim',[0 1],'xlim',[0 N],'xtick',0:N/10:N,'ytick',0:0.1:1)
 grid on
 
@@ -32,5 +33,5 @@ grid on
 xlabel('X_{n}');
 ylabel('X_{n+1}');
 currentFigure = gcf;
-title(currentFigure.Children(end),[sprintf('x_{n+1} = rx_n(1 - x_n)\n') sprintf('x = %.2f\n', x1) sprintf('r = %.1f', r)], 'FontSize', 14);
+title(currentFigure.Children(end),[sprintf('x_{n+1} = rx_n(1 - x_n)\n') sprintf('x = %.2f\n', x1) sprintf('r = %.5f', r)], 'FontSize', 14);
 
